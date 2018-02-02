@@ -32,7 +32,7 @@ function sum(num,num2){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+//testSum(4, 7);
 
 
 
@@ -49,12 +49,14 @@ were input into the function:
 */
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(num1, num2){           //eslint-disable-line
+    const answer = num1 * num2;
+    return [ answer, 'The product of ' + num1 + ' and ' + num2 + ' is ' + answer + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply();
+
+testMultiply(5, 9);
 
 
 /////////////////////////////////////
