@@ -32,7 +32,7 @@ function sum(num,num2){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum();
+testSum(4, 7);
 
 
 
