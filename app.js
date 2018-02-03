@@ -32,7 +32,7 @@ function sum(num,num2){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 
 
@@ -60,35 +60,44 @@ testMultiply(5, 9);
 
 
 /////////////////////////////////////
-/* Problem 3
+//Problem 3
 
-Write a function called sumAndMultiply() that takes in three 
-numbers as separate arguments and returns an array where the 
-first element is the sum of those three numbers, the second 
-element is the product of those three numbers,  and the third 
-and fourth elements are strings that EXACTLY follow this example 
-and use the values that were input into the function:
+// Write a function called sumAndMultiply() that takes in three 
+// numbers as separate arguments and returns an array where the 
+// first element is the sum of those three numbers, the second 
+// element is the product of those three numbers,  and the third 
+// and fourth elements are strings that EXACTLY follow this example 
+// and use the values that were input into the function:
 
-Third element: "4 and 7 and 5 sum to 16."
-Fourth element: "The product of 4 and 7 and 5 is 140."
+// Third element: "4 and 7 and 5 sum to 16."
+// Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL! 
+// IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL! 
 
-    You may not use the arithmetic 
-    operators + and * in this function. To do addition, 
-    use your sum() function, and to do multiplication, 
-    use your multiply() function.
+//     You may not use the arithmetic 
+//     operators + and * in this function. To do addition, 
+//     use your sum() function, and to do multiplication, 
+//     use your multiply() function.
 
-IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL! 
-*/
+// IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL! 
 
-// Write your code here
+
+//  Write your code here
+
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+    const small = sum(a, b)[0];
+    const big = sum(small, c)[0];
+    const cat = multiply(a,b)[0];
+    const dog = multiply(cat, c)[0];
+    return[big, dog, a + ' and ' + b + ' and ' + c + ' sum to ' + big + '.' + ',' + 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + dog + '.' ];
 }
 
+
+
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -113,9 +122,11 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-function sumArray(testArray){ //eslint-disable-line
-
-}
+//function sumArray(testArray){ //eslint-disable-line
+//     const blue = [2, 3, 4];
+//     const dog2 = sum(blue);
+//     return dog2;
+// }
 
 // Here is the test for sumArray(); uncomment it to run it
 // testSumArray();
