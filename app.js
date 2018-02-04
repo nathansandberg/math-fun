@@ -35,6 +35,11 @@ function sum(num,num2){ //eslint-disable-line
 testSum(4, 7);
 
 
+// // Since the sum function returns an array (because we set it up that way), 
+// we need to get the number inside of the array after it calculates what we told it to 
+// calculate. By referencing index 0 at [0], we are saying we need to return the 0 index of 
+// the array that the sum function created
+
 
 
 /////////////////////////////////////
@@ -122,16 +127,17 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-// function sumArray(testArray){ //eslint-disable-line
-//     testArray = [2, 3, 4];
-//     const green = sum(testArray[0], testArray[1]);
-//     return [green, 'This is a test'];
-// }
+function sumArray(testArray){ //eslint-disable-line
+    testArray = [2, 3, 4];
+    const green = sum(testArray[0], testArray[1])[0];
+    const yellow = sum(green, testArray[2])[0];
+    return [yellow, testArray  + ' was passed in as an array of numbers, and ' + yellow + ' is their sum.'];
+}
 
 
-// // Here is the test for sumArray(); uncomment it to run it
+// // // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray();
+testSumArray();
 
 
 /////////////////////////////////////
