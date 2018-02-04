@@ -35,6 +35,11 @@ function sum(num,num2){ //eslint-disable-line
 testSum(4, 7);
 
 
+// // Since the sum function returns an array (because we set it up that way), 
+// we need to get the number inside of the array after it calculates what we told it to 
+// calculate. By referencing index 0 at [0], we are saying we need to return the 0 index of 
+// the array that the sum function created
+
 
 
 /////////////////////////////////////
@@ -79,7 +84,7 @@ testMultiply(5, 9);
 //     use your sum() function, and to do multiplication, 
 //     use your multiply() function.
 
-// IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL! 
+// IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 
 //  Write your code here
@@ -89,7 +94,7 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
     const big = sum(small, c)[0];
     const cat = multiply(a,b)[0];
     const dog = multiply(cat, c)[0];
-    return[big, dog, a + ' and ' + b + ' and ' + c + ' sum to ' + big + '.' + ',' + 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + dog + '.' ];
+    return[big, dog, a + ' and ' + b + ' and ' + c + ' sum to ' + big + '.' , 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + dog + '.' ];
 }
 
 
@@ -122,14 +127,17 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 
-//function sumArray(testArray){ //eslint-disable-line
-//     const blue = [2, 3, 4];
-//     const dog2 = sum(blue);
-//     return dog2;
-// }
+function sumArray(testArray){ //eslint-disable-line
+    testArray = [2, 3, 4];
+    const green = sum(testArray[0], testArray[1])[0];
+    const yellow = sum(green, testArray[2])[0];
+    return [yellow, testArray  + ' was passed in as an array of numbers, and ' + yellow + ' is their sum.'];
+}
 
-// Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
+
+// // // Here is the test for sumArray(); uncomment it to run it
+
+testSumArray();
 
 
 /////////////////////////////////////
@@ -157,9 +165,9 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+//function multiplyArray(testArray){ //eslint-disable-line
 
-}
+//}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray();
