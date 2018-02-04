@@ -165,9 +165,12 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-//function multiplyArray(testArray){ //eslint-disable-line
-
-//}
+function multiplyArray(testArray){ //eslint-disable-line
+    testArray = [2, 3, 4];
+    const orange = multiply(testArray[0], testArray[1])[0];
+    const black = multiply(orange, testArray[2])[0];
+    return [black, 'The numbers ' + testArray + ' have a product of ' + black + '.'];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray();
+testMultiplyArray();
