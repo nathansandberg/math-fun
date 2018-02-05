@@ -128,7 +128,6 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 // Write your code here
 
 function sumArray(testArray){ //eslint-disable-line
-    testArray = [2, 3, 4];
     const green = sum(testArray[0], testArray[1])[0];
     const yellow = sum(green, testArray[2])[0];
     return [yellow, testArray  + ' was passed in as an array of numbers, and ' + yellow + ' is their sum.'];
@@ -137,7 +136,7 @@ function sumArray(testArray){ //eslint-disable-line
 
 // // // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray();
+testSumArray(2,3,4);
 
 
 /////////////////////////////////////
@@ -166,11 +165,10 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-    testArray = [2, 3, 4];
     const orange = multiply(testArray[0], testArray[1])[0];
     const black = multiply(orange, testArray[2])[0];
     return [black, 'The numbers ' + testArray + ' have a product of ' + black + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray();
+testMultiplyArray(2,3,4);
